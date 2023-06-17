@@ -1,25 +1,17 @@
 const add = function(a, b) {
-	return a+b;
+	return a + b;
 };
 
 const subtract = function(a, b) {
-	return a-b;
+	return a - b;
 };
 
 const sum = function(arrayToSum) {
-  let arraySum = 0;
-	arrayToSum.forEach(item => {
-    arraySum += item;
-  });
-  return arraySum;
+  return arrayToSum.reduce((sum, current) => sum + current, 0);
 };
 
 const multiply = function(arrayToMultiple) {
-  let arrayMultiple = 1;
-  arrayToMultiple.forEach(item => {
-    arrayMultiple *= item;
-  });
-  return arrayMultiple;
+  return arrayToMultiple.reduce((currentM, nextM) => currentM * nextM);
 };
 
 const power = function(a, b) {
@@ -28,11 +20,11 @@ const power = function(a, b) {
 
 const factorial = function(a) {
   let factor = 1;
-	if (a == 0) {
+	if (a === 0) {
     return 1;
   } else {
-    for (i=a; i>0; i--) {
-      factor = i * factor
+    for (let i=a; i>0; i--) {
+      factor *= i;
     }
     return factor;
   }
