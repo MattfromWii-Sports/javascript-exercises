@@ -1,6 +1,6 @@
 const palindromes = function (a) {
-    aRev = a.split('').reverse().join('').toLowerCase().replace(/[.,!? ]/g, '');
-    return (aRev == a.toLowerCase().replace(/[.!?, ]/g, '')) ? true : false;
+    aRev = a.toLowerCase().replace(/[.,!? ]/g, '');
+    return aRev == aRev.split('').reverse().join('');
 }
 
 // Do not edit below this line
